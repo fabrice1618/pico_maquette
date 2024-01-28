@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">    
+    <title>Catalogue Outillage général</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="dashboard.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="assets/images.svg#home"/></svg>
+          <span class="fs-4">Catalogue général</span>
+        </a>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="launch.html" class="nav-link">Lancer</a></li>
+          <li class="nav-item"><a href="tarif.html" class="nav-link">Tarif</a></li>
+          <li class="nav-item"><a href="help.html" class="nav-link">Aide</a></li>
+          <li class="nav-item"><a href="utilisateurs.html" class="nav-link active">Utilisateurs</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Déconnexion</a></li>
+        </ul>
+      </header>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Par Toutatis!</strong> Le ciel nous est tombé sur la tête.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Gérer les utilisateurs</h1>
+    </div>
+
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col">
+          <button id="btnAjouterUtilisateur" type="button" class="btn btn-primary">Ajouter utilisateur <svg class="bi me-2" width="20" height="20"><use xlink:href="assets/images.svg#caret-down-fill"/></svg></button>
+        </div>
+      </div>
+      <div class="card" id="listUtilisateur">
+        <div class="card-body">
+            <div class="list-group mb-5">
+              <div class="list-group-item list-group-item-action" data-login="Annabelle" data-role="user" data-actif="Actif" data-description="Description">
+                <div class="row">
+                  <div class="col-sm-2 text-muted">
+                    Annabelle
+                  </div>
+                  <div class="col-sm-2">
+                    <span class="badge rounded-pill bg-info">
+                      User
+                    </span>
+                  </div>
+                  <div class="col">
+                    <small class="text-muted">Description</small>          
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="dropdown">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="15" height="15"><use xlink:href="assets/images.svg#burger-list"/></svg>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item btn-modifier" href="#">Modifier</a></li>
+                        <li><a class="dropdown-item btn-supprimer" href="#">Supprimer</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-action" data-login="Bernard" data-role="user" data-actif="Actif" data-description="Description">
+                <div class="row">
+                  <div class="col-sm-2 text-muted">
+                    Bernard
+                  </div>
+                  <div class="col-sm-2">
+                    <span class="badge rounded-pill bg-info">
+                      User
+                    </span>
+                  </div>
+                  <div class="col">
+                    <small class="text-muted">Description</small>          
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="dropdown">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="15" height="15"><use xlink:href="assets/images.svg#burger-list"/></svg>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item btn-modifier" href="#">Modifier</a></li>
+                        <li><a class="dropdown-item btn-supprimer" href="#">Supprimer</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-action" data-login="Claire" data-role="admin" data-actif="Inactif" data-description="Description">
+                <div class="row">
+                  <div class="col-sm-2 text-muted">
+                    Claire
+                  </div>
+                  <div class="col-sm-2">
+                    <span class="badge rounded-pill bg-success">
+                      Admin
+                    </span>
+                    <span class="badge rounded-pill bg-danger">
+                      Inactif
+                    </span>
+                  </div>
+                  <div class="col">
+                    <small class="text-muted">Description</small>          
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="dropdown">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="15" height="15"><use xlink:href="assets/images.svg#burger-list"/></svg>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item btn-modifier" href="#">Modifier</a></li>
+                        <li><a class="dropdown-item btn-supprimer" href="#">Supprimer</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-action" data-login="Denise" data-role="admin" data-actif="Actif" data-description="Description">
+                <div class="row">
+                  <div class="col-sm-2 text-muted">
+                    Denise
+                  </div>
+                  <div class="col-sm-2">
+                    <span class="badge rounded-pill bg-success">
+                      Admin
+                    </span>
+                  </div>
+                  <div class="col">
+                    <small class="text-muted">Description</small>          
+                  </div>
+                  <div class="col-sm-1">
+                    <div class="dropdown">
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg class="bi me-2" width="15" height="15"><use xlink:href="assets/images.svg#burger-list"/></svg>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item btn-modifier" href="#">Modifier</a></li>
+                        <li><a class="dropdown-item btn-supprimer" href="#">Supprimer</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>                  
+        </div>
+      </div>      
+    </div>
+
+    <div class="container">
+      <div class="card" id="formUtilisateurAdd">
+        <div class="card-body">
+          <h5 class="card-title">Ajouter utilisateur</h5>
+            <form action="#" method="POST">
+              <input type="hidden" id="token" name="token" value="1234ABC">
+              <div class="row">
+                <div class="col-sm-6">
+                  <label for="inputLoginAdd" class="form-label">Login</label>
+                  <input type="text" class="form-control" name="login" id="inputLoginAdd">
+                </div>
+                <div class="col-sm-6">
+                  <label for="roleInput" class="form-label">Rôle</label>
+                  <select class="form-select" name="role" id="roleInput" aria-label="Sélectionner un rôle">
+                    <option selected>Sélectionner un rôle</option>
+                    <option value="user">Utilisateur</option>
+                    <option value="admin">Administrateur</option>
+                  </select>
+                </div>
+              </div>
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <label for="descriptionInput" class="form-label">Description</label>
+                <input type="text" class="form-control" name="description" id="descriptionInput" aria-describedby="descriptionHelp">
+                <div id="descriptionHelp" class="form-text">Information supplémentaires, société...</div>
+              </div>
+              <div class="col-sm-6">
+                <label for="passwordInput" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="passwordInput" aria-describedby="passwordHelp">
+                <div id="passwordHelp" class="form-text">Mot de passe de 8 caractères minimum, contenant au moins 2 chiffre, 2 majuscules, 2 minuscules et 2 caractères spéciaux.</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <div class="mb-3 form-check">
+                  <label class="form-check-label" for="actifInput">Utilisateur actif</label>
+                  <input type="checkbox" class="form-check-input" name="actif" id="actifInput">
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row mb-3">
+              <div class="col-sm-1"></div>
+              <div class="col">
+                <button type="submit" formaction="#" class="btn btn-primary">Annuler</button>
+              </div>
+              <div class="col"></div>
+              <div class="col">
+                <button type="submit" formaction="utilisateurs.html" class="btn btn-primary">Ajouter</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card" id="formUtilisateurUpdate">
+        <div class="card-body">
+          <h5 class="card-title">Modifier utilisateur</h5>
+          <form action="#" method="POST">
+            <input type="hidden" id="token" name="token" value="1234ABC">
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="inputLoginUpdate" class="form-label">Login</label>
+                <input type="text" class="form-control" name="login" id="inputLoginUpdate" value="Annabelle">
+              </div>
+              <div class="col-sm-6">
+                <label for="inputRoleUpdate" class="form-label">Rôle</label>
+                <select class="form-select" name="role" id="inputRoleUpdate" aria-label="Sélectionner un rôle">
+                  <option>Sélectionner un rôle</option>
+                  <option value="user" selected>Utilisateur</option>
+                  <option value="admin">Administrateur</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <label for="inputDescriptionUpdate" class="form-label">Description</label>
+                <input type="text" class="form-control" name="description" id="inputDescriptionUpdate" aria-describedby="descriptionHelp" value="Description">
+                <div id="descriptionHelp" class="form-text">Information supplémentaires, société...</div>
+              </div>
+              <div class="col-sm-6">
+                <label for="inputPasswordUpdate" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPasswordUpdate" aria-describedby="passwordHelp" value="********">
+                <div id="passwordHelp" class="form-text">Mot de passe de 8 caractères minimum, contenant au moins 2 chiffre, 2 majuscules, 2 minuscules et 2 caractères spéciaux.</div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <div class="mb-3 form-check">
+                  <label class="form-check-label" for="inputActifUpdate">Utilisateur actif</label>
+                  <input type="checkbox" class="form-check-input" name="actif" id="inputActifUpdate" checked>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row mb-3">
+              <div class="col-sm-1"></div>
+              <div class="col">
+                <button type="submit" formaction="#" class="btn btn-primary">Annuler</button>
+              </div>
+              <div class="col">
+              </div>
+              <div class="col">
+                <button type="submit" formaction="utilisateurs.html" class="btn btn-primary">Modifier</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card" id="formUtilisateurDelete">
+        <div class="card-body">
+          <h5 class="card-title">Supprimer utilisateur</h5>
+
+          <form action="#" method="POST">
+            <input type="hidden" id="token" name="token" value="1234ABC">
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="inputLoginDelete" class="form-label">Login</label>
+                <input type="text" class="form-control" name="login" id="inputLoginDelete" value="Claire" disabled>
+              </div>
+              <div class="col-sm-6">
+                <label for="inputRoleDelete" class="form-label">Rôle</label>
+                <select class="form-select" name="role" id="inputRoleDelete" aria-label="Sélectionner un rôle" disabled>
+                  <option>Sélectionner un rôle</option>
+                  <option value="user">Utilisateur</option>
+                  <option value="admin" selected>Administrateur</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <label for="inputDescriptionDelete" class="form-label">Description</label>
+                <input type="text" class="form-control" name="description" id="inputDescriptionDelete" aria-describedby="descriptionHelp" value="Description" disabled>
+              </div>
+              <div class="col-sm-6">
+                <label for="inputPasswordDelete" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPasswordDelete" aria-describedby="passwordHelp" value="********" disabled>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <div class="mb-3 form-check">
+                  <label class="form-check-label" for="inputActifDelete">Utilisateur actif</label>
+                  <input type="checkbox" class="form-check-input" name="actif" id="inputActifDelete" disabled>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row mb-3">
+              <div class="col-sm-1"></div>
+              <div class="col">
+                <button type="submit" formaction="#" class="btn btn-primary">Annuler</button>
+              </div>
+              <div class="col"></div>
+              <div class="col">
+                <button type="submit" formaction="utilisateurs.html" class="btn btn-primary">Supprimer</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/utilisateurs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
